@@ -1,0 +1,7 @@
+node_modules/
+build/
+_config.yml
+_site/
+.jekyll-cache/
+.DS_Store
+.env*

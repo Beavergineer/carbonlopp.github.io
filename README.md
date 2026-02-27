@@ -1,2 +1,2 @@
-# carbonlopp.github.io
+# CarbonLoop
 Carbon assessment for sprouting companies 

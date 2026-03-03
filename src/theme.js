@@ -5,7 +5,7 @@ export const carbonTheme = createTheme({
     primary: { main: '#059669' },    // Vert forêt
     secondary: { main: '#28540A' },  // Vert émeraude
     background: { 
-    default: '#F4F7F4',               // 🟢 Fond vert très très clair (moins blanc)
+    default: '#F4F7F4',    
     paper: '#FFFFFF'                  // Cartes restent blanches pour contraste
     } 
   },

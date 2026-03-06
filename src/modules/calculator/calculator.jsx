@@ -1,5 +1,4 @@
 import { Box, Paper, Typography, Button, TextField } from '@mui/material';
-import { useState } from 'react';
 
 export default function Calculator() {
   return (

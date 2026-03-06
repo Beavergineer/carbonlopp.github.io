@@ -9,10 +9,10 @@ function App() {
 
   const renderContent = () => {
     switch(currentTab) {
-      case 0: return <Calculator />;
-      case 1: return <Dashboard />;
+      case 0: return <Dashboard />;
+      case 1: return <Calculator />;
       case 2: return <div>Rapports en construction...</div>;
-      default: return <Calculator />;
+      default: return <Dashboard />;
     }
   };
 

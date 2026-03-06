@@ -10,8 +10,8 @@ import React from 'react';
 import { useState } from 'react'; 
 
 const menuItems = [
-  { text: 'Calculateur ACV', path: 'calculator', index: 0 },
-  { text: 'Dashboard', path: 'dashboard', index: 1 },
+  { text: 'Dashboard', path: 'dashboard', index: 0 },
+  { text: 'Calculateur ACV', path: 'calculator', index: 1 },
   { text: 'Rapports', path: 'reports', index: 2 },
 ];
 
@@ -102,9 +102,9 @@ export default function AppLayout({ children, currentTab = 0, setCurrentTab }) {
       </AppBar>
 
       {/* Persistent Drawer */}
-        <Box component="nav" sx={{ width: { md: drawerWidth }, flexShrink: { md: 0 } }}>
+        <Box component="nav" sx={{ flexShrink: { md: 0 } }}>
             <Drawer
-                variant="persistent"
+                variant="temporary"
                 open={desktopOpen || mobileOpen}
                 onClose={() => { 
                     setMobileOpen(false); 
@@ -128,16 +128,20 @@ export default function AppLayout({ children, currentTab = 0, setCurrentTab }) {
       {/* Main content */}
       <Box
         component="main"
-        sx={{ 
-          flexGrow: 1, 
-          p: 3, 
-          mt: '64px',  // AppBar height
-          width: { md: `calc(100% - ${drawerWidth}px)` }
+        sx={{
+          display: 'flex',
+          flexDirection: { xs: 'column', md: 'row' },
+          flexGrow: 1,
+          p: 0,          // or p: 0 if you want very tight layout
+          mt: '64px',
+          ml: 0,
+          justifyContent: 'flex-start',   // ← this is key
+          alignItems: 'stretch'
         }}
       >
-        <Container maxWidth="xl">
+        <Box sx={{ width: '100%' }}>
           {children}
-        </Container>
+        </Box>
       </Box>
     </Box>
   );

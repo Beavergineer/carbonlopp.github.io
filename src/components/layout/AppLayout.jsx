@@ -57,6 +57,18 @@ export default function AppLayout({ children, currentTab = 0, setCurrentTab }) {
   const drawer = (
     <Box sx={{ width: drawerWidth }}>
       <Toolbar />
+      <Box sx={{ px: 2 }}>
+      <ListItemText 
+        primary="Menu" 
+        slotProps={{ 
+          primary: { 
+            fontWeight: 'bold', 
+            color: 'text.primary',
+            variant: 'h6'
+          } 
+        }} 
+      />
+      </Box>
       <Divider />
       <List>
         {menuItems.map((item) => (

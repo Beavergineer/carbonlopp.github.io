@@ -11,8 +11,8 @@ import { useState } from 'react';
 
 const menuItems = [
   { text: 'Dashboard', path: 'dashboard', index: 0 },
-  { text: 'Calculateur ACV', path: 'calculator', index: 1 },
-  { text: 'Rapports', path: 'reports', index: 2 },
+  { text: 'Quick loop', path: 'calculator', index: 1 },
+  { text: 'Big loop', path: 'reports', index: 2 },
 ];
 
 export default function AppLayout({ children, currentTab = 0, setCurrentTab }) {
